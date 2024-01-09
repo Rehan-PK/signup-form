@@ -1,0 +1,97 @@
+:root {
+  --left-width: 450px;
+  --right-width: 650px;
+  --full-height: 750px;
+  --big-container-height: 262.5px;
+  --small-container-height: 225px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body, 
+.right {
+  display: flex;
+  margin: 0;
+}
+
+.left {
+  background-image: url('background.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;     
+  /* from w3c */
+  /* background-attachment: fixed; */
+  width: var(--left-width);
+  height: var(--full-height);
+  
+  /* position: absolute; */
+  /* left: 0; */
+  /* margin-left: 0; */
+  /* z-index: -1; */
+}
+
+img[src='odin-lined.png'] {
+  width: auto;
+  height: 100px;
+}
+
+.banner {
+  width: var(--left-width);
+  height: 120px;
+  background-color: black;
+  opacity: 0.5;
+  position: absolute;
+  z-index: 1;
+}
+
+.front-banner {
+  display: flex;
+  /* width: var(--left-width);
+  height: 262.5px; */
+  /* justify-content: center; */
+  align-items: center;
+  z-index: 2;
+  color: white;
+
+  margin-bottom: 10px;
+}
+
+.left-container {
+  display: flex;
+  width: var(--left-width);
+  height: var(--big-container-height);
+  
+  justify-content: center;
+  align-items: flex-end;
+  
+  font-size: 40px;
+}
+
+h2 {
+  margin: 0;
+}
+
+/* styling right side portion */
+.right {
+  width: var(--right-width);
+  background-color: black;
+  flex-direction: column;
+}
+
+.section1, .section3 {
+  width: var(--right-width);
+  height: var(--big-container-height);
+  background-color: rgb(250, 243, 243);
+}
+
+.section2 {
+  height: var(--small-container-height);
+  width: var(--right-width);
+  background-color: white;
+}
+
+
+
+
+
