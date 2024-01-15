@@ -21,7 +21,7 @@ body,
   background-repeat: no-repeat;
   background-size: 100% 100%;     
   /* from w3c */
-  /* background-attachment: fixed; */
+  background-attachment: fixed;
   width: var(--left-width);
   height: var(--full-height);
   
@@ -75,27 +75,28 @@ h2 {
 /* styling right side portion */
 .right {
   width: var(--right-width);
-  background-color: black;
+  /* background-color: black; */
   flex-direction: column;
 }
 
 .section1, .section3 {
   width: var(--right-width);
   height: var(--big-container-height);
-  background-color: rgb(250, 243, 243);
+  background-color: rgb(251, 251, 242);
 }
 
 .section2 {
   height: var(--small-container-height);
   width: var(--right-width);
   background-color: white;
+  padding: 10px 0 0 30px;
 }
 
 .right .section1 {
   display: flex;
   flex-direction: column;
   justify-content: end;
-  padding: 0 100px 50px 15px;
+  padding: 0 100px 50px 30px;
 } 
 
 span {
@@ -108,10 +109,71 @@ span {
 
 .form-row {
   display: flex;
-
+  margin-top: 15px;
+  gap: 60px;
 }
 
 .form-field {
   display: flex;
   flex-direction: column;
+  font-size: 12px;
+  font-weight: bold;
 }
+
+.form-field input {
+  border: 1px solid #E5E7EB;
+  border-radius: 3px;
+  width: 200px;
+  height: 22px;
+  padding: 3px 8px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.section3 {
+  padding: 30px 0 0 30px;
+  /* box-shadow: inset 0px 1px 2px black; */
+}
+
+/* shadow b/w section2 & section3 */
+.section2 {
+  box-shadow: 0px 2px 4px gray;
+  z-index: 2;
+}
+
+/* button */
+.section3 button {
+  padding: 9px 35px;
+  border: 1px solid rgb(102, 173, 69);
+  border-radius: 5px;
+  background-color: rgb(102, 173, 69);
+  color: white;
+  font-weight: bold;
+}
+
+.form-field input:focus {
+  border: 1px solid blue;
+}
+
+input:invalid {
+  border: 1px solid red;
+}
+
+input:invalid + label::after {
+  content: "Please";
+}
+
+input:focus {
+  border: 1px solid blue;
+  outline: none;    /* used to override browser's thick black focus border */
+  box-shadow: 1px 1px 3px gray;
+}
+
+.section3 span {
+  font-style: normal;
+}
+
+.section3 a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
